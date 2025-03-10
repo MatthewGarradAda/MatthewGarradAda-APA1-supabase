@@ -46,24 +46,10 @@ supabase functions serve email_confirmation
 curl -i --location --request POST 'http://localhost:54321/functions/v1/email_confirmation' \
   --header 'Authorization: Bearer YOUR_ANON_KEY' \
   --data '{
-    "order": {
+    "record": {
       "id": 123,
       "email": "customer@example.com",
-      "address1": "123 Test Street",
-      "address2": "Apt 4B",
-      "city": "Test City", 
-      "postcode": "TE1 1ST",
-      "products": [
-        {
-          "id": 1,
-          "name": "Test Product",
-          "price": "99.99",
-          "quantity": 2,
-          "sku": "TEST123"
-        }
-      ],
-      "total": "199.98",
-      "created_at": "2024-01-20T12:00:00Z"
+      "total_amount": "199.98"
     }
   }'
 ```
